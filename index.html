@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Kupon Souvenir | Hanis & Diyana</title>
+    <!-- Tailwind CSS untuk styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts untuk tipografi yang elegan -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            /* Background abu-abu elegan dengan pattern titik halus */
+            background-color: #e5e7eb; 
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Animasi masuk yang halus */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Efek bayangan lembut untuk gambar */
+        .img-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 sm:p-6">
+
+    <!-- Container Utama -->
+    <div class="bg-white max-w-md w-full rounded-2xl shadow-xl p-6 sm:p-8 text-center relative overflow-hidden fade-in-up">
+        
+        <!-- Garis Aksen di Atas (Warna Biru Mega Mendung & Coklat Kayu) -->
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#1e3a8a] via-[#8b5a2b] to-[#1e3a8a]"></div>
+
+        <!-- Bagian Header -->
+        <div class="mt-2 mb-6">
+            <h2 class="font-serif italic text-neutral-500 text-lg sm:text-xl mb-1 tracking-wide">The Wedding of</h2>
+            <h1 class="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 mb-2 mt-2">Hanis & Diyana</h1>
+            <div class="flex items-center justify-center gap-4 mt-4">
+                <div class="h-px bg-neutral-300 w-10"></div>
+                <p class="text-neutral-600 font-semibold tracking-widest text-sm uppercase">28 Juni 2026</p>
+                <div class="h-px bg-neutral-300 w-10"></div>
+            </div>
+        </div>
+
+        <!-- Bagian Gambar Voucher -->
+        <!-- Area ini diberi padding dan background abu super muda agar gambar Anda menonjol -->
+        <div class="relative bg-neutral-50 rounded-xl p-2 sm:p-3 mb-8 img-shadow border border-neutral-100">
+            <!-- Garis putus-putus seperti area sobekan kupon -->
+            <div class="border-2 border-dashed border-neutral-300 rounded-lg p-1 sm:p-2">
+                
+                <!-- 
+                  PENTING: 
+                  Pastikan file gambar Anda bernama "bingkis.png" 
+                  dan berada di dalam folder yang sama dengan file HTML ini.
+                -->
+                <img src="bingkis.png" 
+                     alt="Voucher Penukaran Bingkisan" 
+                     class="w-full h-auto rounded shadow-sm object-cover"
+                     onerror="this.src='https://via.placeholder.com/800x500?text=Gambar+Voucher+(bingkis.png)+Akan+Tampil+Di+Sini'">
+            </div>
+        </div>
+
+        <!-- Bagian Footer / Penutup -->
+        <div class="mt-4 mb-2">
+            <p class="font-serif text-2xl sm:text-3xl text-neutral-800 italic font-medium">Terima Kasih</p>
+            <p class="text-xs text-neutral-400 mt-2 font-light">Tunjukkan layar ini kepada petugas souvenir</p>
+        </div>
+        
+    </div>
+
+</body>
+</html>
